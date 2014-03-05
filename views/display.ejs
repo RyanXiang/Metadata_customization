@@ -1,0 +1,20 @@
+<div class="panel-group" id="accordion">
+<% for( var i in file_name) { %>
+	<div class="panel panel-default">
+    	<div class="panel-heading">
+      		
+        	<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse<%=i%>">
+          		<%= file_name[i] %>
+        	</a>
+      		
+    	</div>
+   		<div id="collapse<%=i%>" class="panel-collapse collapse">
+      		<div class="panel-body">
+      			<%- content[i]%> 
+      		</div>
+    	</div>
+  	</div>
+<% } %>
+
+</div>
+

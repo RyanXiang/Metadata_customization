@@ -1,0 +1,17 @@
+<% user.forEach(function(user,index) {
+	if (index % 3 == 0) { %>
+		<div class="row">
+    <%} %>
+    	<div class="span4">
+    		<p><%= user._id %></p>
+  			<p><%= user.username %></p>
+  			<p><%= user.password %></p>
+  		</div>
+	<% if (index % 3 == 2) { %>
+		</div><!-- end row -->
+	<% } %>
+<%}) %>
+
+<% if (user.length % 3 != 0) { %>
+	</div><!-- end row -->
+<%} %>
