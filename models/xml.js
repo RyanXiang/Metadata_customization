@@ -3,7 +3,8 @@ var mongoose = require('mongoose')
     , ObjectId = Schema.ObjectId;
 
 var XmlSchema = new Schema({
-      header: Object
+      content: String,
+      boname: { type: [String], index: true}
 });
 
 module.exports = mongoose.model('Xml', XmlSchema);

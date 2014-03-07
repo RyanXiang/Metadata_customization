@@ -27,9 +27,9 @@ app.use(express.methodOverride());
 app.use(express.cookieParser());
 app.use(partials());
 
-app.use(express.json({uploadDir:'./uploads'}));
-app.use(express.urlencoded({uploadDir:'./uploads'}));
-app.use(require('connect-multiparty')({uploadDir:'./uploads'}));
+app.use(express.json({uploadDir:'../uploads'}));
+app.use(express.urlencoded({uploadDir:'../uploads'}));
+app.use(require('connect-multiparty')({uploadDir:'../uploads'}));
 app.use(express.session({
 	secret: settings.cookieSecret,
 	key: settings.db,
