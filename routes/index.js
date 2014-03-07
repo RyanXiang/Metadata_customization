@@ -89,7 +89,7 @@ module.exports = function (app) {
 		    	var jsonfile = JSON.stringify(result).replace(/{/,"{\"FileName\":\""+ paths.name+"\",");
 		    	fs.writeFileSync( count+".json", jsonfile);
          		var importdir = "C:/mongodb/mongodb-win32-x86_64-2008plus-2.4.9/bin/mongoimport.exe";
-         		var jsonfiledir = "C:/Users/I079907/Documents/js/express/know/"+ count+ ".json"; 
+         		var jsonfiledir = "./"+ count+ ".json"; 
        	 		exec( importdir + " --db " + dbname + " --collection " + scname + " -file " + jsonfiledir); 		
        	 		count += 1;
 
